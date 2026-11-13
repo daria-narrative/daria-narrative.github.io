@@ -1,0 +1,318 @@
+
+/* ========================================== */
+/* DARIA.NARRATIVE — ОБРАЗИ ТА РЕКВІЗИТ       */
+/* ========================================== */
+
+
+/* ========================================== */
+/* 1. ВСТУПНА ЧАСТИНА                         */
+/* ========================================== */
+
+.dresses-intro {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px;
+  padding: 10px 20px 0;
+}
+
+.dresses-intro .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #2D2622;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.dresses-description {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #554e48;
+  margin: 0 auto;
+}
+
+
+/* ========================================== */
+/* 2. СЕКЦІЇ З РЕЧАМИ                         */
+/* ========================================== */
+
+.dress-item-section {
+  max-width: 1000px;
+  margin: 0 auto 75px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.dress-size-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  margin-bottom: 28px;
+  color: #554e48;
+}
+
+
+/* ========================================== */
+/* 3. КАРТКИ СУКОНЬ ТА РЕКВІЗИТУ              */
+/* ========================================== */
+
+.dress-item {
+  width: 100%;
+  margin: 0 auto 55px;
+}
+
+.dress-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ========================================== */
+/* 4. ФОТОГРАФІЇ                              */
+/* ========================================== */
+
+/* ДВІ ФОТОГРАФІЇ ПОРУЧ НА КОМП'ЮТЕРІ */
+
+.dress-photo-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.dress-img-card {
+  width: 100%;
+  overflow: hidden;
+  background-color: #F8F7F5;
+}
+
+.dress-img-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.dress-img-card img:hover {
+  transform: scale(1.015);
+}
+
+
+/* ========================================== */
+/* 5. ОДНА ФОТОГРАФІЯ                         */
+/* ========================================== */
+
+/* ТРЕТЯ ТА ЧЕТВЕРТА СУКНІ */
+
+.dress-photo-pair:has(.dress-img-card:only-child) {
+  display: flex;
+  justify-content: center;
+}
+
+.dress-photo-pair:has(.dress-img-card:only-child) .dress-img-card {
+  width: 100%;
+  max-width: 410px;
+}
+
+
+/* ========================================== */
+/* 6. ІНФОРМАЦІЯ ПРО РІЧ                      */
+/* ========================================== */
+
+.item-info {
+  text-align: center;
+  max-width: 500px;
+  margin: 25px auto 0;
+  padding: 0 10px;
+}
+
+.item-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #2D2622;
+  margin: 0 0 8px;
+}
+
+.item-size {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #817970;
+  margin: 0 0 16px;
+}
+
+
+/* ========================================== */
+/* 7. ПОЗНАЧКИ: БЕЗКОШТОВНО / ПЛАТНА ОРЕНДА   */
+/* ========================================== */
+
+.item-status {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 17px;
+  border: 1px solid #C59A4E;
+  color: #80602F;
+  background: transparent;
+  margin: 0 0 10px;
+}
+
+.item-status.free {
+  border-color: #A2AA7B;
+  color: #78854B;
+}
+
+
+/* ========================================== */
+/* 8. ВАРТІСТЬ                                */
+/* ========================================== */
+
+.item-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #554e48;
+  margin: 5px 0 0;
+}
+
+
+/* ========================================== */
+/* 9. МОБІЛЬНА АДАПТАЦІЯ                      */
+/* ========================================== */
+
+@media screen and (max-width: 768px) {
+
+  .dresses-intro {
+    margin-bottom: 42px;
+    padding: 15px 22px 0;
+  }
+
+  .dresses-intro .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .dresses-description {
+    font-size: 1.15rem;
+    line-height: 1.65;
+  }
+
+  .dress-item-section {
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+
+  .dress-size-title {
+    font-size: 1.7rem;
+    margin-bottom: 23px;
+  }
+
+  .dress-item {
+    margin-bottom: 40px;
+  }
+
+  /* ДВІ ФОТОГРАФІЇ ВЕРТИКАЛЬНО */
+
+  .dress-photo-pair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .dress-photo-pair .dress-img-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .dress-photo-pair .dress-img-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  /* ОДНА ФОТОГРАФІЯ ПО ЦЕНТРУ */
+
+  .dress-photo-pair:has(.dress-img-card:only-child) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dress-photo-pair:has(.dress-img-card:only-child) .dress-img-card {
+    width: 100%;
+    max-width: 410px;
+  }
+
+  /* ІНФОРМАЦІЯ */
+
+  .item-info {
+    margin-top: 21px;
+  }
+
+  .item-name {
+    font-size: 1.8rem;
+  }
+
+  .item-status {
+    font-size: 0.65rem;
+    padding: 9px 15px;
+  }
+
+  .item-price {
+    font-size: 1.25rem;
+  }
+
+}
+
+
+/* ========================================== */
+/* 10. МАЛЕНЬКІ ЕКРАНИ                        */
+/* ========================================== */
+
+@media screen and (max-width: 380px) {
+
+  .dresses-intro .section-title {
+    font-size: 2rem;
+  }
+
+  .dresses-description {
+    font-size: 1.05rem;
+  }
+
+  .dress-size-title {
+    font-size: 1.5rem;
+  }
+
+  .item-name {
+    font-size: 1.65rem;
+  }
+
+}
+
+
+/* ========================================== */
+/* 11. ДОСТУПНІСТЬ                            */
+/* ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .dress-img-card img {
+    transition: none;
+  }
+
+}

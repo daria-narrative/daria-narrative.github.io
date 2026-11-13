@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daria.narrative — Контакти</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Підключаємо CSS -->
+  <link rel="stylesheet" href="contacts.css">
+</head>
+<body>
+
+  <!-- Шапка сайту -->
+  <header class="header">
+    <div class="header-container">
+      
+      <!-- Логотип -->
+      <a href="index.html" class="logo">daria.narrative</a>
+
+      <!-- Меню для комп'ютера -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="portfolio.html">Портфоліо</a></li>
+          <li><a href="about.html">Про мене</a></li>
+          <li><a href="services.html">Ціна</a></li>
+          <li><a href="dresses.html">Образи та реквізит</a></li>
+          <li><a href="contacts.html" class="active">Контакти</a></li>
+        </ul>
+      </nav>
+
+      <!-- Кнопка-гамбургер для телефону -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Мобільне меню -->
+  <nav class="nav-overlay" id="navOverlay">
+    <button class="close-btn" id="closeMenu">&times;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="portfolio.html">Портфоліо</a></li>
+      <li><a href="about.html">Про мене</a></li>
+      <li><a href="services.html">Ціна</a></li>
+      <li><a href="dresses.html">Образи та реквізит</a></li>
+      <li><a href="contacts.html" class="active">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <main class="contacts-main">
+    <section class="contacts-section">
+      
+      <!-- Верхнє атмосферне фото -->
+      <div class="contacts-image-wrapper">
+        <img src="Daria-01.jpg" alt="Фото за роботою">
+      </div>
+
+      <!-- Біла картка з контактами -->
+      <div class="contacts-card">
+        <h1 class="contacts-title">Контакти</h1>
+        <p class="contacts-text">
+          З радістю втілю для вас зйомку вашої мрії! Напишіть мені в інстаграм і ми про все домовимось
+        </p>
+
+        <!-- Кнопка «Замовити зйомку» -->
+        <a href="https://www.instagram.com/daria.narrative/" target="_blank" rel="noopener noreferrer" class="order-btn">
+          Замовити зйомку
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <button class="scroll-top-btn" id="scrollTop" aria-label="Вгору">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    
+    <div class="social-links">
+      <a href="https://www.instagram.com/daria.narrative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+
+    <p class="copyright">© Дарʼя Гончаренко</p>
+  </footer>
+
+  <!-- Підключаємо JS -->
+  <script src="contacts.js"></script>
+</body>
+</html>

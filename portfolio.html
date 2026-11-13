@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daria.narrative — Портфоліо</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">daria.narrative</a>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="portfolio.html" class="active">Портфоліо</a></li>
+          <li><a href="about.html">Про мене</a></li>
+          <li><a href="services.html">Ціна</a></li>
+          <li><a href="dresses.html">Образ та реквізит</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- МОБІЛЬНЕ МЕНЮ -->
+  <nav class="nav-overlay" id="navOverlay">
+    <button class="close-btn" id="closeMenu" aria-label="Закрити меню">&times;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="portfolio.html">Портфоліо</a></li>
+      <li><a href="about.html">Про мене</a></li>
+      <li><a href="services.html">Ціна</a></li>
+      <li><a href="dresses.html">Образ та реквізити</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="portfolio-section">
+      <div class="portfolio-grid">
+        <!-- Картка 1: Індивідуальна зйомка (веде на individual.html) -->
+        <a href="individual.html" class="portfolio-link">
+          <div class="portfolio-card">
+            <div class="portfolio-image-wrapper">
+              <img src="IMG_2026-11-06-214420.jpg" alt="Індивідуальна зйомка">
+            </div>
+            <h2 class="portfolio-card-title">Індивідуальна зйомка</h2>
+            <p class="portfolio-subtitle">Переглянути серії</p>
+          </div>
+        </a>
+
+        <!-- Картка 2: Love Story (веде на lovestory.html) -->
+        <a href="lovestory.html" class="portfolio-link">
+          <div class="portfolio-card">
+            <div class="portfolio-image-wrapper">
+              <img src="IMG_2026-11-06-214018.jpg" alt="Love Story">
+            </div>
+            <h2 class="portfolio-card-title">Love Story</h2>
+            <p class="portfolio-subtitle">Переглянути серії</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <button class="scroll-top-btn" id="scrollTop" aria-label="Повернутися нагору">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <div class="social-links">
+      <a href="https://www.instagram.com/daria.narrative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+    <p class="copyright">© Дарʼя Гончаренко</p>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

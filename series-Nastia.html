@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daria.narrative — Nastia</title>
+  
+  <!-- ШРИФТИ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- ІКОНКИ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- СТИЛІ -->
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <!-- ШАПКА САЙТУ -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">daria.narrative</a>
+      
+      <!-- Меню для комп'ютера -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="portfolio.html" class="active">Портфоліо</a></li>
+          <li><a href="about.html">Про мене</a></li>
+          <li><a href="services.html">Ціна</a></li>
+          <li><a href="dresses.html">Образ та реквізит</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+
+      <!-- Мобільна кнопка гамбургер -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- МОБІЛЬНЕ МЕНЮ -->
+  <nav class="nav-overlay" id="navOverlay">
+    <button class="close-btn" id="closeMenu" aria-label="Закрити меню">&times;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="portfolio.html">Портфоліо</a></li>
+      <li><a href="about.html">Про мене</a></li>
+      <li><a href="services.html">Ціна</a></li>
+      <li><a href="dresses.html">Образ та реквізит</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <!-- ОСНОВНА ГАЛЕРЕЯ СЕРІЇ -->
+  <main class="series-view-main">
+    <div class="photo-feed">
+      
+      <!-- Фото 1 -->
+      <div class="photo-item">
+        <img src="Nastia-1.jpg" alt="Nastia — фото 1">
+      </div>
+
+      <!-- Фото 2 -->
+      <div class="photo-item">
+        <img src="Nastia-2.jpg" alt="Nastia — фото 2">
+      </div>
+
+      <!-- Фото 3 -->
+      <div class="photo-item">
+        <img src="Nastia-3.jpg" alt="Nastia — фото 3">
+      </div>
+
+      <!-- Фото 4 -->
+      <div class="photo-item">
+        <img src="Nastia-4.jpg" alt="Nastia — фото 4">
+      </div>
+
+      <!-- Фото 5 -->
+      <div class="photo-item">
+        <img src="Nastia-5.jpg" alt="Nastia — фото 5">
+      </div>
+
+      <!-- Фото 6 -->
+      <div class="photo-item">
+        <img src="Nastia-6.jpg" alt="Nastia — фото 6">
+      </div>
+     
+      <!-- Фото 7 -->
+      <div class="photo-item">
+        <img src="Nastia-7.jpg" alt="Nastia — фото 7">
+      </div>
+
+      <!-- Фото 8 -->
+      <div class="photo-item">
+        <img src="Nastia-8.jpg" alt="Nastia — фото 8">
+      </div>
+      
+      <!-- Фото 9 -->
+      <div class="photo-item">
+        <img src="Nastia-9.jpg" alt="Nastia — фото 9">
+      </div>
+
+    </div>
+  </main>
+
+  <!-- МОДАЛЬНЕ ВІКНО ДЛЯ ЗБІЛЬШЕННЯ ФОТО -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <img src="" alt="Збільшене фото" id="lightboxImg">
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <button class="scroll-top-btn" id="scrollTop" aria-label="Повернутися нагору">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/daria.narrative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+
+    <p class="copyright">© Дарʼя Гончаренко</p>
+  </footer>
+
+  <!-- СКРИПТ -->
+  <script src="portfolio.js"></script>
+
+</body>
+</html>

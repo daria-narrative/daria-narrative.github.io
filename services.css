@@ -1,0 +1,887 @@
+/* ========================================== */
+/* 1. СКИДАННЯ ТА БАЗОВІ СТИЛІ                */
+/* ========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #2D2622;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================== */
+/* 2. ШАПКА ТА МЕНЮ                           */
+/* ========================================== */
+
+.header {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 30px 20px 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo {
+  font-family: 'Alex Brush', cursive;
+  font-size: 3rem;
+  color: #91aa01;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.desktop-nav {
+  display: flex !important;
+  flex-direction: row;
+  list-style: none;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.desktop-nav a {
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: #2D2622;
+  transition: color 0.3s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  color: #91aa01;
+}
+
+/* ========================================== */
+/* 3. МОБІЛЬНЕ МЕНЮ                           */
+/* ========================================== */
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-overlay .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #2D2622;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-links a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: #2D2622;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #91aa01;
+}
+
+/* ========================================== */
+/* 4. ОСНОВНА СТОРІНКА                        */
+/* ========================================== */
+
+.services-main {
+  width: 100%;
+  max-width: 620px;
+  padding: 55px 20px 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ========================================== */
+/* 5. ВСТУПНИЙ БЛОК                           */
+/* ========================================== */
+
+.services-intro {
+  padding: 30px 0 65px;
+}
+
+.intro-label,
+.booking-label {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: #91aa01;
+  margin-bottom: 18px;
+}
+
+.main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #2D2622;
+}
+
+.intro-text {
+  max-width: 390px;
+  margin: 20px auto 0;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  font-weight: 300;
+  color: #716963;
+}
+
+.intro-line {
+  width: 45px;
+  height: 1px;
+  background: #91aa01;
+  margin: 30px auto 0;
+}
+
+/* ========================================== */
+/* 6. КАТЕГОРІЇ ФОТОЗЙОМКИ                    */
+/* ========================================== */
+
+.service-category {
+  margin-bottom: 90px;
+  text-align: left;
+}
+
+.category-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.category-number {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: #91aa01;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.category-heading .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #2D2622;
+  margin: 0 0 10px;
+}
+
+.category-description {
+  max-width: 400px;
+  margin: 0 auto;
+  color: #77706a;
+  font-size: 0.83rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ========================================== */
+/* ДОДАТКОВІ БЛОКИ ОПИСУ ПРОЦЕСУ ТА УМОВ      */
+/* ========================================== */
+
+.service-details-block {
+  margin: 25px 0 35px;
+  text-align: left;
+}
+
+/* Блок назви та ціни як на зразку */
+.service-title-block {
+  text-align: left;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eae7e3;
+  padding-bottom: 15px;
+}
+
+.service-title-inline {
+  display: flex;
+  flex-direction: column; /* Змінює напрямок з рядка на стовпчик */
+  align-items: flex-start; /* Вирівнює все по лівому краю */
+  gap: 5px; /* Невеликий відступ між назвою та ціною */
+  width: 100%;
+}
+
+
+.service-title-block .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #2D2622;
+  margin: 0;
+  flex: 1;
+}
+
+.category-start-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #89817b;
+  white-space: nowrap;
+}
+
+.service-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #2D2622;
+  margin: 20px 0 12px;
+}
+
+.service-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #77706a;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.service-list li {
+  margin-bottom: 8px;
+}
+
+/* ========================================== */
+/* 7. ВАРТІСТЬ ПОСЛУГ                         */
+/* ========================================== */
+
+.pricing-list {
+  width: 100%;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 19px 5px;
+  border-bottom: 1px solid #eae7e3;
+}
+
+.price-row:first-child {
+  border-top: 1px solid #eae7e3;
+}
+
+.price-details {
+  text-align: left;
+}
+
+.price-details h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: #2D2622;
+  margin-bottom: 4px;
+}
+
+.price-details p {
+  font-size: 0.72rem;
+  color: #89817b;
+  font-weight: 300;
+}
+
+.price-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2D2622;
+  white-space: nowrap;
+}
+
+/* ========================================== */
+/* 8. БЛОК ЗАПИСУ НА ЗЙОМКУ                  */
+/* ========================================== */
+
+.booking-section {
+  padding: 42px 18px;
+  margin: 30px 0 50px;
+  background: #f8f7f4;
+  text-align: center;
+}
+
+.booking-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  font-weight: 400;
+  max-width: 320px;
+  margin: 0 auto 12px;
+  color: #2D2622;
+}
+
+.booking-section p {
+  max-width: 300px;
+  margin: 0 auto 20px;
+  color: #77706a;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.booking-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border: 1px solid #91aa01;
+  color: #2D2622;
+  background: transparent;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.booking-button:hover {
+  background: #91aa01;
+  color: #FFFFFF;
+}
+
+.booking-button i {
+  font-size: 0.7rem;
+}
+
+/* ========================================== */
+/* 9. УМОВИ СПІВПРАЦІ / FAQ                  */
+/* ========================================== */
+
+.conditions-section {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.conditions-section > .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+.conditions-intro {
+  text-align: center;
+  font-size: 0.78rem;
+  color: #89817b;
+  margin: 10px 0 30px;
+}
+
+.conditions-section .faq-item {
+  margin-bottom: 0;
+  border-bottom: 1px solid #eae7e3;
+}
+
+.conditions-section .faq-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 5px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #2D2622;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.conditions-section .faq-title:focus-visible {
+  outline: 2px solid #91aa01;
+  outline-offset: 4px;
+}
+
+.conditions-section .faq-title i {
+  color: #91aa01;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.conditions-section .faq-text {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 5px;
+  opacity: 0;
+  color: #77706a;
+  font-size: 0.78rem;
+  line-height: 1.8;
+  font-weight: 300;
+  transition:
+    max-height 0.45s ease,
+    opacity 0.3s ease,
+    padding 0.3s ease;
+}
+
+.conditions-section .faq-item.active .faq-text {
+  max-height: 500px;
+  padding: 0 5px 20px;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .conditions-section .faq-text,
+  .conditions-section .faq-title i {
+    transition: none;
+  }
+}
+
+/* ========================================== */
+/* 10. КНОПКА ТА ПІДНІЖОК                    */
+/* ========================================== */
+
+.action-btn-wrapper {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.btn-border {
+  display: inline-block;
+  padding: 12px 35px;
+  border: 1px solid #2D2622;
+  color: #2D2622;
+  background-color: #FFFFFF;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 0;
+}
+
+.btn-border:hover {
+  background-color: #2D2622;
+  color: #FFFFFF;
+}
+
+.footer {
+  padding: 40px 20px 30px;
+  text-align: center;
+}
+
+.scroll-top-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 30px;
+  color: #2D2622;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.social-links a {
+  font-size: 1.4rem;
+  color: #2D2622;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ========================================== */
+/* 11. АДАПТИВНІСТЬ                           */
+/* ========================================== */
+
+@media (max-width: 768px) {
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 3000;
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: block !important;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2D2622;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .services-main {
+    padding: 85px 20px 55px;
+  }
+
+  .services-intro {
+    padding: 25px 0 55px;
+  }
+
+  .main-title {
+    font-size: 2.55rem;
+  }
+
+  .service-category {
+    margin-bottom: 75px;
+  }
+
+  .category-heading .section-title {
+    font-size: 2.2rem;
+  }
+
+  .booking-section {
+    padding: 40px 16px;
+    margin: 25px -20px 45px;
+  }
+
+  .booking-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ========================================== */
+/* 12. МАЛЕНЬКІ ЕКРАНИ                        */
+/* ========================================== */
+
+@media (max-width: 380px) {
+
+  .services-main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .main-title {
+    font-size: 2.25rem;
+  }
+
+  .category-heading .section-title {
+    font-size: 2rem;
+  }
+
+  .price-details h3 {
+    font-size: 1.3rem;
+  }
+
+  .price-details p {
+    font-size: 0.66rem;
+  }
+
+  .price-value {
+    font-size: 1.6rem;
+  }
+}
+
+/* ========================================== */
+/* 13. BEFORE / AFTER — НОВИЙ ПОВЗУНОК       */
+/* ========================================== */
+
+.before-after {
+  --position: 85%;
+
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+  background: #f3f0eb;
+
+  margin: 0 0 25px;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  touch-action: pan-y;
+}
+
+/* ФОТОГРАФІЇ */
+
+.before-after__image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  max-width: none;
+
+  object-fit: cover;
+  object-position: center;
+
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.before-after__image--after {
+  z-index: 1;
+}
+
+.before-after__image--before {
+  z-index: 2;
+
+  clip-path: inset(
+    0 calc(100% - var(--position)) 0 0
+  );
+}
+
+/* ВЕРТИКАЛЬНА ЛІНІЯ */
+
+.before-after__divider {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 0;
+  bottom: 0;
+  left: var(--position);
+
+  width: 1.5px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+/* КРУГЛИЙ ПОВЗУНОК */
+
+.before-after__handle {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  transform: translate(-50%, -50%);
+
+  border: 2px solid rgba(255, 255, 255, 0.98);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.15),
+    inset 0 0 8px rgba(255, 255, 255, 0.12);
+
+  pointer-events: none;
+}
+
+/* ЛІВА СТРІЛКА */
+
+.before-after__arrow {
+  display: block;
+
+  width: 0;
+  height: 0;
+
+  flex-shrink: 0;
+}
+
+.before-after__arrow--left {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 7px solid #FFFFFF;
+
+  margin-left: -2px;
+
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* ПРАВА СТРІЛКА */
+
+.before-after__arrow--right {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 7px solid #FFFFFF;
+
+  margin-right: -2px;
+
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* ПРОЗОРИЙ ПОВЗУНОК */
+
+.before-after__range {
+  position: absolute;
+
+  z-index: 10;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  opacity: 0;
+
+  cursor: ew-resize;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  touch-action: pan-y;
+}
+
+.before-after__range:focus-visible {
+  outline: 2px solid #91aa01;
+  outline-offset: -4px;
+}
+
+/* ЕФЕКТ ПРИ НАВЕДЕННІ */
+
+@media (hover: hover) {
+
+  .before-after__handle {
+    transition:
+      background 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .before-after:hover .before-after__handle {
+    background: rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+      0 3px 16px rgba(0, 0, 0, 0.2),
+      inset 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+
+}
+
+/* МОБІЛЬНА ВЕРСІЯ */
+
+@media (max-width: 600px) {
+
+  .before-after {
+    aspect-ratio: 4 / 5;
+    margin-bottom: 25px;
+  }
+
+  .before-after__handle {
+    width: 48px;
+    height: 48px;
+    gap: 6px;
+  }
+
+  .before-after__arrow--left {
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-right-width: 6px;
+  }
+
+  .before-after__arrow--right {
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 6px;
+  }
+
+}
+
+/* ========================================== */
+/* 14. ПОВАГА ДО НАЛАШТУВАНЬ АНІМАЦІЇ        */
+/* ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .before-after *,
+  .before-after *::before,
+  .before-after *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+}

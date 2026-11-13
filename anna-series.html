@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daria.narrative — Серія зйомки: Анна</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Підключаємо CSS для цієї сторінки -->
+  <link rel="stylesheet" href="series-view.css">
+</head>
+<body>
+
+  <!-- ОНОВЛЕНА ШАПКА (як на головній та інших серіях) -->
+  <header class="header">
+    <div class="header-container">
+      
+      <!-- Логотип -->
+      <a href="index.html" class="logo">daria.narrative</a>
+
+      <!-- Горизонтальне меню ДЛЯ КОМП'ЮТЕРА -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="portfolio.html">Портфоліо</a></li>
+          <li><a href="about.html">Про мене</a></li>
+          <li><a href="services.html">Ціна</a></li>
+          <li><a href="dresses.html">Образ та реквізит</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+
+      <!-- Кнопка-гамбургер ТІЛЬКИ ДЛЯ ТЕЛЕФОНУ -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Мобільне висувне меню -->
+  <nav class="nav-overlay" id="navOverlay">
+    <button class="close-btn" id="closeMenu">&times;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="portfolio.html">Портфоліо</a></li>
+      <li><a href="about.html">Про мене</a></li>
+      <li><a href="services.html">Ціна</a></li>
+      <li><a href="dresses.html">Образ та реквізит </a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <main class="series-view-main">
+    <!-- Стрічка фотографій серії для Анни з папки Anna-Photoshoot -->
+    <div class="photo-feed">
+
+      <div class="photo-item">
+        <img src="Anna-01.jpg" alt="Анна фото 1">
+      </div>
+
+      <div class="photo-item">
+        <img src="Anna-02.jpg" alt="Анна фото 2">
+      </div>
+
+      <div class="photo-item">
+        <img src="Anna-03.jpg" alt="Анна фото 3">
+      </div>
+
+      <div class="photo-item">
+        <img src="Anna-04.jpg" alt="Анна фото 4">
+      </div>
+
+      <div class="photo-item">
+        <img src="Anna-05.jpg" alt="Анна фото 5">
+      </div>
+
+      <div class="photo-item">
+        <img src="Anna-07.jpg" alt="Анна фото 7">
+      </div>
+
+      <div class="photo-item">
+        <img src="Anna-08.jpg" alt="Анна фото 8">
+      </div>
+
+      <div class="photo-item">
+        <img src="Anna-09.jpg" alt="Анна фото 9">
+      </div>
+
+      <div class="photo-item">
+        <img src="Anna-10.jpg" alt="Анна фото 10">
+      </div>
+      
+ <div class="photo-item">
+        <img src="Anna-11.jpg" alt="Анна фото 11">
+      </div>
+      
+       <div class="photo-item">
+        <img src="Anna-12.jpg" alt="Анна фото 12">
+      </div>
+      
+       <div class="photo-item">
+        <img src="Anna-13.jpg" alt="Анна фото 13">
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- Модальне вікно (лайтбокс) для збільшення та гортання фотографій -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-arrow-left"></i></button>
+    <img src="" alt="Збільшене фото" id="lightboxImg">
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+
+  <!-- Підніжок -->
+  <footer class="footer">
+    <button class="scroll-top-btn" id="scrollTop" aria-label="Вгору">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    
+    <div class="social-links">
+      <a href="https://www.instagram.com/daria.narrative/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+
+    <p class="copyright">© Дарʼя Гончаренко</p>
+  </footer>
+
+  <!-- Підключаємо JS -->
+  <script src="series-view.js"></script>
+</body>
+</html>
