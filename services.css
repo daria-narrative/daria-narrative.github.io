@@ -261,12 +261,11 @@ img {
 
 .service-title-inline {
   display: flex;
-  flex-direction: column; /* Змінює напрямок з рядка на стовпчик */
-  align-items: flex-start; /* Вирівнює все по лівому краю */
-  gap: 5px; /* Невеликий відступ між назвою та ціною */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   width: 100%;
 }
-
 
 .service-title-block .section-title {
   font-family: 'Cormorant Garamond', serif;
@@ -274,7 +273,46 @@ img {
   font-weight: 400;
   color: #2D2622;
   margin: 0;
-  flex: 1;
+}
+
+/* ========================================== */
+/* ЕСТЕТИЧНИЙ ЖУРНАЛЬНИЙ БЛОК ЦІН             */
+/* ========================================== */
+
+.price-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 2px;
+}
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 500;
+  color: #2D2622;
+  line-height: 1.1;
+}
+
+.price-city {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  color: #89817b;
+  margin-top: 4px;
+}
+
+.price-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #eae7e3;
 }
 
 .category-start-price {
@@ -484,6 +522,53 @@ img {
   opacity: 1;
 }
 
+/* Стилі для структурованих списків у FAQ */
+.faq-steps {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.faq-steps > li {
+  margin-bottom: 8px;
+}
+
+.faq-steps > li:last-child {
+  margin-bottom: 0;
+}
+
+.faq-sublist {
+  list-style-type: none;
+  padding-left: 12px;
+  margin-top: 6px;
+  border-left: 1.5px solid #91aa01;
+}
+
+.faq-sublist li {
+  margin-bottom: 4px;
+}
+
+.faq-sublist strong {
+  font-weight: 500;
+  color: #2D2622;
+}
+
+.faq-text a {
+  color: #2D2622;
+  font-weight: 500;
+  border-bottom: 1px solid #91aa01;
+  transition: color 0.2s ease;
+}
+
+.faq-text a:hover {
+  color: #91aa01;
+}
+
+.faq-note {
+  margin-top: 10px;
+  color: #89817b;
+  font-size: 0.74rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .conditions-section .faq-text,
   .conditions-section .faq-title i {
@@ -656,7 +741,7 @@ img {
 }
 
 /* ========================================== */
-/* 13. BEFORE / AFTER — НОВИЙ ПОВЗУНОК       */
+/* 13. BEFORE / AFTER — ПОВЗУНОК             */
 /* ========================================== */
 
 .before-after {
@@ -676,8 +761,6 @@ img {
 
   touch-action: pan-y;
 }
-
-/* ФОТОГРАФІЇ */
 
 .before-after__image {
   position: absolute;
@@ -706,8 +789,6 @@ img {
   );
 }
 
-/* ВЕРТИКАЛЬНА ЛІНІЯ */
-
 .before-after__divider {
   position: absolute;
 
@@ -725,8 +806,6 @@ img {
 
   pointer-events: none;
 }
-
-/* КРУГЛИЙ ПОВЗУНОК */
 
 .before-after__handle {
   position: absolute;
@@ -759,8 +838,6 @@ img {
   pointer-events: none;
 }
 
-/* ЛІВА СТРІЛКА */
-
 .before-after__arrow {
   display: block;
 
@@ -780,8 +857,6 @@ img {
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
 
-/* ПРАВА СТРІЛКА */
-
 .before-after__arrow--right {
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
@@ -791,8 +866,6 @@ img {
 
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
-
-/* ПРОЗОРИЙ ПОВЗУНОК */
 
 .before-after__range {
   position: absolute;
@@ -822,8 +895,6 @@ img {
   outline-offset: -4px;
 }
 
-/* ЕФЕКТ ПРИ НАВЕДЕННІ */
-
 @media (hover: hover) {
 
   .before-after__handle {
@@ -841,8 +912,6 @@ img {
   }
 
 }
-
-/* МОБІЛЬНА ВЕРСІЯ */
 
 @media (max-width: 600px) {
 
